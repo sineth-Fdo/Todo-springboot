@@ -19,7 +19,7 @@ const LoginComponent = () => {
             storeToken(token);
 
             saveLoggedInUser(username);
-            navigator('/todos');
+            navigator('/todos', { state: { username } });
 
             window.location.reload(false);
         }).catch((error) => {
